@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    image: librarymanagement:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: librarymanagement_app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-csgloajtq21c73dsg6j0-a.oregon-postgres.render.com/librarymanagement_a9x5
+      SPRING_DATASOURCE_USERNAME: librarymanagement_a9x5_user
+      SPRING_DATASOURCE_PASSWORD: zsPZnNkAOsdSGdi1CvZjXW2EpnJihmHO
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
